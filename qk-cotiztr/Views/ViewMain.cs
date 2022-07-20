@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using qk_cotiztr.Controllers;
 
 namespace qk_cotiztr.Views
 {

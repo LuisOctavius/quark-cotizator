@@ -149,9 +149,7 @@ namespace qk_cotiztr.Controllers
 
         private void Event_CotizationQuantity_Validating(object sender, CancelEventArgs e)
         {
-            string error;
-
-            if (!QuantityValidation(_view.textBox_CotizationQuantity.Text, out error))
+            if (!QuantityValidation(_view.textBox_CotizationQuantity.Text, out string error))
             {
                 e.Cancel = true;
                 _view.textBox_CotizationQuantity.Select(0, _view.textBox_CotizationQuantity.TextLength);
