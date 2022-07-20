@@ -29,22 +29,17 @@ namespace qk_cotiztr.Controllers
                 GarmentsOnSale = new List<Garment>()
                 {
                     new Shirt("Cuello mao manga corta", 100, 100, QualityType.Standard, NeckType.Mandarin, SleeveType.Short),
-                    new Shirt("Cuello mao manga corta", 200, 100, QualityType.Premium, NeckType.Mandarin, SleeveType.Short),
-
-                    new Shirt("Cuello comun manga corta", 300, 150, QualityType.Standard, NeckType.Classic, SleeveType.Short),
-                    new Shirt("Cuello comun manga corta", 400, 150, QualityType.Premium, NeckType.Classic, SleeveType.Short),
-
-                    new Shirt("Cuello mao manga larga", 500, 75, QualityType.Standard, NeckType.Mandarin, SleeveType.Long),
-                    new Shirt("Cuello mao manga larga", 600, 75, QualityType.Premium, NeckType.Mandarin, SleeveType.Long),
-
-                    new Shirt("Cuello comun manga larga", 700, 175, QualityType.Standard, NeckType.Classic, SleeveType.Long),
-                    new Shirt("Cuello comun manga larga", 800, 175, QualityType.Premium, NeckType.Classic, SleeveType.Long),
-
-                    new Pants("Chupin", 900, 750, QualityType.Standard, PantsType.Chupin),
-                    new Pants("Chupin", 1000, 750, QualityType.Premium, PantsType.Chupin),
-
-                    new Pants("Comun", 1100, 250, QualityType.Standard, PantsType.Common),
-                    new Pants("Comun", 1200, 250, QualityType.Premium, PantsType.Common)
+                    new Shirt("Cuello mao manga corta", 100, 100, QualityType.Premium, NeckType.Mandarin, SleeveType.Short),
+                    new Shirt("Cuello comun manga corta", 100, 150, QualityType.Standard, NeckType.Classic, SleeveType.Short),
+                    new Shirt("Cuello comun manga corta", 100, 150, QualityType.Premium, NeckType.Classic, SleeveType.Short),
+                    new Shirt("Cuello mao manga larga", 100, 75, QualityType.Standard, NeckType.Mandarin, SleeveType.Long),
+                    new Shirt("Cuello mao manga larga", 100, 75, QualityType.Premium, NeckType.Mandarin, SleeveType.Long),
+                    new Shirt("Cuello comun manga larga", 100, 175, QualityType.Standard, NeckType.Classic, SleeveType.Long),
+                    new Shirt("Cuello comun manga larga", 100, 175, QualityType.Premium, NeckType.Classic, SleeveType.Long),
+                    new Pants("Chupin", 100, 750, QualityType.Standard, PantsType.Chupin),
+                    new Pants("Chupin", 100, 750, QualityType.Premium, PantsType.Chupin),
+                    new Pants("Comun", 100, 250, QualityType.Standard, PantsType.Common),
+                    new Pants("Comun", 100, 250, QualityType.Premium, PantsType.Common)
                 },
                 Vendor = new Vendor()
                 {

@@ -1,0 +1,12 @@
+D:\Github\qk-cotiztr\qk-cotiztr\bin\Release\qk-cotiztr.exe.config
+D:\Github\qk-cotiztr\qk-cotiztr\bin\Release\qk-cotiztr.exe
+D:\Github\qk-cotiztr\qk-cotiztr\bin\Release\qk-cotiztr.pdb
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk-cotiztr.csproj.AssemblyReference.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk-cotiztr.csproj.SuggestedBindingRedirects.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk_cotiztr.Views.ViewCotizationHistory.resources
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk_cotiztr.Views.ViewMain.resources
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk_cotiztr.Properties.Resources.resources
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk-cotiztr.csproj.GenerateResource.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk-cotiztr.csproj.CoreCompileInputs.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk-cotiztr.exe
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Release\qk-cotiztr.pdb
