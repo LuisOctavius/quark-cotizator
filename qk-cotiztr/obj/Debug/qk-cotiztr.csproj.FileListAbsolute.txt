@@ -1,0 +1,12 @@
+D:\Github\qk-cotiztr\qk-cotiztr\bin\Debug\qk-cotiztr.exe.config
+D:\Github\qk-cotiztr\qk-cotiztr\bin\Debug\qk-cotiztr.exe
+D:\Github\qk-cotiztr\qk-cotiztr\bin\Debug\qk-cotiztr.pdb
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk-cotiztr.csproj.AssemblyReference.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk-cotiztr.csproj.SuggestedBindingRedirects.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk_cotiztr.Properties.Resources.resources
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk-cotiztr.csproj.GenerateResource.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk-cotiztr.csproj.CoreCompileInputs.cache
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk-cotiztr.exe
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk-cotiztr.pdb
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk_cotiztr.Views.ViewCotizationHistory.resources
+D:\Github\qk-cotiztr\qk-cotiztr\obj\Debug\qk_cotiztr.Views.ViewMain.resources
