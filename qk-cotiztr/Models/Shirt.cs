@@ -16,8 +16,8 @@ namespace qk_cotiztr.Models
             Sleeve = sleeveType;
         }
 
-        public NeckType Neck { get; set; }
-        public SleeveType Sleeve { get; set; }
+        private NeckType Neck { get; set; }
+        private SleeveType Sleeve { get; set; }
         public override GarmentType Type => GarmentType.Camisa;
         public override double Price
         {

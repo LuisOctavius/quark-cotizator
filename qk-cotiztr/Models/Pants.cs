@@ -16,7 +16,7 @@ namespace qk_cotiztr.Models
             Style = pantsStyle;
         }
 
-        public PantsType Style { get; set; }
+        private PantsType Style { get; set; }
         public override GarmentType Type => GarmentType.Pantalon;
         public override double Price
         {

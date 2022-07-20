@@ -90,6 +90,7 @@ namespace qk_cotiztr.Controllers
 
             _view.comboBox_Garments.DataSource = groupedGarmentTypes;
             _view.comboBox_Garments.DisplayMember = "Name";
+
         }
 
         private void Event_SelectedGarment(object sender, EventArgs e)
