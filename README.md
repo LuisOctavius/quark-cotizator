@@ -4,8 +4,8 @@
 ## Ejecución
 ```
 1. Ejecutar Cotizador.exe en la raiz del proyecto.
-2. Intentar no romperlo tanto
+2. Intentar no romperlo tanto :)
 ```
 
 # Diagrama UML
-![Dominio](/uml_diagram.jpeg)
+![Dominio](/uml_diagram.jpg)
