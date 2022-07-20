@@ -63,16 +63,6 @@ namespace qk_cotiztr.Controllers
             _view.LinkLabel_VendorCotizations.LinkClicked += Event_ShowVendorCotizations;
         }
 
-        public Store GetStore()
-        {
-            return _store;
-        }
-
-        public IEnumerable<Cotization> GetCotizations()
-        {
-            return _cotizations;
-        }
-
         private Cotization AddCotization(Garment garment, decimal total)
         {
             Cotization cotization = new Cotization(Guid.NewGuid(), DateTime.Now, _store.Vendor.Id, garment, total);
