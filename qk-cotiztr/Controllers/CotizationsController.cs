@@ -57,8 +57,6 @@ namespace qk_cotiztr.Controllers
             _view.comboBox_Garments.SelectedIndexChanged += Event_SelectedGarment;
             _view.checkBox_PremiumQuality.CheckedChanged += Event_GarmentQualityChanged;
             _view.listBox_GarmentVariants.SelectedIndexChanged += Event_SelectedGarmentVariant;
-            _view.textBox_CotizationQuantity.Validating += Event_CotizationQuantity_Validating;
-            _view.textBox_CotizationQuantity.Validated += Event_CotizationQuantity_Validated;
             _view.Btn_GenerateCotization.Click += Event_GenerateCotization;
             _view.LinkLabel_VendorCotizations.LinkClicked += Event_ShowVendorCotizations;
         }
@@ -92,6 +90,7 @@ namespace qk_cotiztr.Controllers
 
             _view.comboBox_Garments.DataSource = groupedGarmentTypes;
             _view.comboBox_Garments.DisplayMember = "Name";
+            _view.comboBox_Garments.SelectedText = null;
         }
 
         private void Event_SelectedGarment(object sender, EventArgs e)
@@ -147,61 +146,16 @@ namespace qk_cotiztr.Controllers
             _view.label_AvailableStockInfoData.Text = $"{selectedVariant.Stock} - {selectedVariant.Quality}";
         }
 
-        private void Event_CotizationQuantity_Validating(object sender, CancelEventArgs e)
-        {
-            if (!QuantityValidation(_view.textBox_CotizationQuantity.Text, out string error))
-            {
-                e.Cancel = true;
-                _view.textBox_CotizationQuantity.Select(0, _view.textBox_CotizationQuantity.TextLength);
-
-                _view.errorProvider_MainWindow.SetError(_view.textBox_CotizationQuantity, error);
-            }
-        }
-
-        private void Event_CotizationQuantity_Validated(object sender, EventArgs e)
-        {
-            _view.errorProvider_MainWindow.SetError(_view.textBox_CotizationQuantity, string.Empty);
-        }
-
-        private bool QuantityValidation(string quantityInput, out string error)
-        {
-            if (quantityInput.Length == 0)
-            {
-                error = "La cantidad es requerida.";
-                return false;
-            }
-
-            bool isNumeric = int.TryParse(quantityInput, out var quantity);
-
-            if (isNumeric && quantity > 0)
-            {
-                error = string.Empty;
-                return true;
-            }
-
-            error = "La cantidad ingresada no es válida, debe ser numérica y mayor a cero.";
-            return false;
-        }
         private void Event_GenerateCotization(object sender, EventArgs e)
         {
             try
             {
                 ResetCurrentCotization();
 
+                if (!ValidateCotization()) return;
+
                 var selectedVariant = (Garment)_view.listBox_GarmentVariants.SelectedValue;
                 var selectedQuantity = int.Parse(_view.textBox_CotizationQuantity.Text);
-
-                if (selectedVariant == null)
-                {
-                    MessageBox.Show("Necesitas seleccionar una prenda para poder cotizarla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (selectedVariant.Stock < selectedQuantity)
-                {
-                    MessageBox.Show($"Tu cantidad a cotizar supera el stock disponible, volve a intentarlo con un máximo de {selectedVariant.Stock} prendas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
 
                 var total = Convert.ToDecimal(selectedVariant.Price * selectedQuantity);
 
@@ -213,6 +167,33 @@ namespace qk_cotiztr.Controllers
             {
                 MessageBox.Show($"An unexpected exception occured while generating the current cotization: { ex.Message }", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool ValidateCotization()
+        {
+            var selectedVariant = (Garment)_view.listBox_GarmentVariants.SelectedValue;
+            bool hasValidQuantity = int.TryParse(_view.textBox_CotizationQuantity.Text, out var selectedQuantity);
+            bool status = false;
+
+            if (selectedVariant == null)
+            {
+                MessageBox.Show("Necesitas seleccionar una prenda para poder cotizarla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return status;
+            }
+
+            if (!hasValidQuantity || hasValidQuantity && selectedQuantity < 1)
+            {
+                MessageBox.Show("La cantidad ingresada no es válida, debe ser numérica y mayor a cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return status;
+            }
+
+            if (selectedVariant.Stock < selectedQuantity)
+            {
+                MessageBox.Show($"Tu cantidad a cotizar supera el stock disponible, volve a intentarlo con un máximo de { selectedVariant.Stock } prendas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return status;
+            }
+
+            return !status;
         }
 
         private void ResetCurrentCotization()

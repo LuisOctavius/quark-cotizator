@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMain));
             this.Panel_FixedTop = new System.Windows.Forms.Panel();
             this.Btn_CloseApp = new System.Windows.Forms.PictureBox();
@@ -54,7 +53,6 @@
             this.listBox_GarmentVariants = new System.Windows.Forms.ListBox();
             this.Group_Step1 = new System.Windows.Forms.GroupBox();
             this.comboBox_Garments = new System.Windows.Forms.ComboBox();
-            this.errorProvider_MainWindow = new System.Windows.Forms.ErrorProvider(this.components);
             this.Panel_FixedTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_CloseApp)).BeginInit();
             this.Panel_StoreInfo.SuspendLayout();
@@ -66,7 +64,6 @@
             this.Group_Step2.SuspendLayout();
             this.Group_Step3.SuspendLayout();
             this.Group_Step1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_MainWindow)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_FixedTop
@@ -340,10 +337,6 @@
             this.comboBox_Garments.Size = new System.Drawing.Size(233, 27);
             this.comboBox_Garments.TabIndex = 3;
             // 
-            // errorProvider_MainWindow
-            // 
-            this.errorProvider_MainWindow.ContainerControl = this;
-            // 
             // ViewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,7 +369,6 @@
             this.Group_Step2.PerformLayout();
             this.Group_Step3.ResumeLayout(false);
             this.Group_Step1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_MainWindow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,7 +399,6 @@
         public System.Windows.Forms.Button Btn_GenerateCotization;
         public System.Windows.Forms.Label label_CotizationResult;
         public System.Windows.Forms.Label label_AvailableStockInfoData;
-        public System.Windows.Forms.ErrorProvider errorProvider_MainWindow;
     }
 }
 
